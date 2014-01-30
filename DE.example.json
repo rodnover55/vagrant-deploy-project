@@ -1,0 +1,17 @@
+{
+    "project": "project-name",
+    "box": "box-name",
+    "ip": "10.2.2.15",
+    "source": "../",
+    "path": "/var/www/project-name",
+    "domain": "project-name.local",
+    "aliases": "www.project-name.local,
+    "db" : {
+        "database": "db-name",
+        "host": "127.0.0.1",
+        "user": "root",
+        "password": "",
+        "config": "",
+        "install": "install.sql"
+    }
+}
