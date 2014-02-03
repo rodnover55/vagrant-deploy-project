@@ -1,6 +1,7 @@
 {
     "project": "project-name",
     "box": "box-name",
+    "box_url": "box-url",
     "ip": "10.2.2.15",
     "source": "../",
     "path": "/var/www/project-name",
