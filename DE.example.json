@@ -5,7 +5,8 @@
     "source": "../",
     "path": "/var/www/project-name",
     "domain": "project-name.local",
-    "aliases": "www.project-name.local,
+    "aliases": "www.project-name.local",
+    "type": "type-project",
     "db" : {
         "database": "db-name",
         "host": "127.0.0.1",
