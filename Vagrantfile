@@ -14,6 +14,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box_url = project_config['box_url']
 
   config.vm.network :private_network, ip: project_config['ip']
+
+  unless project_config['memory'].nil?
+    config.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", project_config['memory']]
+    end
+  end
+
   config.vm.memory = project_config['memory'] || 256
   project_config['source'] ||= '../'
   project_config['path'] ||= PROJECT_PATH + project_config['project']
