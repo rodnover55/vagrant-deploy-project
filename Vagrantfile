@@ -21,7 +21,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
   end
 
-  config.vm.memory = project_config['memory'] || 256
   project_config['source'] ||= '../'
   project_config['path'] ||= PROJECT_PATH + project_config['project']
   config.vm.synced_folder project_config['source'], project_config['path']
