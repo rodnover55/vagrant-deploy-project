@@ -14,6 +14,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box_url = project_config['box_url']
 
   config.vm.network :private_network, ip: project_config['ip']
+  config.vm.memory = project_config['memory'] || 256
   project_config['source'] ||= '../'
   project_config['path'] ||= PROJECT_PATH + project_config['project']
   config.vm.synced_folder project_config['source'], project_config['path']
