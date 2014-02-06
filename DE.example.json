@@ -25,5 +25,9 @@
     },
     "disabled": [
         "apache-configure"
-    ]
+    ],
+    "php-oc": {
+        "redirect": "",
+        "base": "/"
+    }
 }
