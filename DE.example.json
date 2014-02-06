@@ -9,6 +9,12 @@
     "domain": "project-name.local",
     "aliases": ["www.project-name.local"],
     "type": "type-project",
+    "repo": {
+        "url": "url-repository",
+        "branch": "master",
+        "private_key": "private_key",
+        "public_key": "public_key"
+    },
     "db" : {
         "database": "db-name",
         "host": "127.0.0.1",
@@ -16,5 +22,8 @@
         "password": "",
         "config": "",
         "install": "install.sql"
-    }
+    },
+    "disabled": [
+        "apache-configure"
+    ]
 }
