@@ -25,7 +25,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   project_config['deploy-project']['path'] ||= PROJECT_PATH + project_config['deploy-project']['project']
   config.vm.synced_folder project_config['deploy-project']['source'], project_config['deploy-project']['path']
 
-  unless roject_config['deploy-project']['ip'].nil?
+  unless project_config['deploy-project']['ip'].nil?
     project_config.merge({
         'mysql' => {
             'bind_address' => project_config['deploy-project']['ip']

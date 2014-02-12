@@ -25,12 +25,17 @@
         "install": "install.sql",
         "provider": "mysql",
         "migrate": "command/for/migrate",
+        "migrate_cwd": "current/directory/for/migrate/command",
         "install_type": "none"
     },
     "disabled": [
         "apache-configure"
     ],
     "php-oc": {
+        "redirect": "",
+        "base": "/"
+    },
+    "php-cake": {
         "redirect": "",
         "base": "/"
     }
