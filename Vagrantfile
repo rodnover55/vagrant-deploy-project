@@ -25,6 +25,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   project_config['deploy-project']['path'] ||= PROJECT_PATH + project_config['deploy-project']['project']
   config.vm.synced_folder project_config['deploy-project']['source'], project_config['deploy-project']['path']
 
+  project_config['mysql']['bind_address'] = project_config['deploy-project']['ip']
+
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = 'cookbooks'
     chef.add_recipe 'deploy-project::develop'

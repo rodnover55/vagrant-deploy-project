@@ -13,7 +13,9 @@
         "url": "url-repository",
         "branch": "master",
         "private_key": "private_key",
-        "public_key": "public_key"
+        "public_key": "public_key",
+        "erase_path": false,
+        "method": "sync"
     },
     "db" : {
         "database": "db-name",
@@ -22,7 +24,8 @@
         "password": "",
         "install": "install.sql",
         "provider": "mysql",
-        "migrate": "command/for/migrate"
+        "migrate": "command/for/migrate",
+        "install_type": "none"
     },
     "disabled": [
         "apache-configure"
