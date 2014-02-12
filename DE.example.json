@@ -1,42 +1,44 @@
 {
-    "project": "project-name",
-    "box": "box-name",
-    "box_url": "box-url",
-    "memory": 256,
-    "ip": "10.2.2.15",
-    "source": "../",
-    "path": "/var/www/project-name",
-    "domain": "project-name.local",
-    "aliases": ["www.project-name.local"],
-    "type": "type-project",
-    "repo": {
-        "url": "url-repository",
-        "branch": "master",
-        "private_key": "private_key",
-        "public_key": "public_key",
-        "erase_path": false,
-        "method": "sync"
-    },
-    "db" : {
-        "database": "db-name",
-        "host": "127.0.0.1",
-        "user": "root",
-        "password": "",
-        "install": "install.sql",
-        "provider": "mysql",
-        "migrate": "command/for/migrate",
-        "migrate_cwd": "current/directory/for/migrate/command",
-        "install_type": "none"
-    },
-    "disabled": [
-        "apache-configure"
-    ],
-    "php-oc": {
-        "redirect": "",
-        "base": "/"
-    },
-    "php-cake": {
-        "redirect": "",
-        "base": "/"
+    "deploy-project": {
+        "project": "project-name",
+        "box": "box-name",
+        "box_url": "box-url",
+        "memory": 256,
+        "ip": "10.2.2.15",
+        "source": "../",
+        "path": "/var/www/project-name",
+        "domain": "project-name.local",
+        "aliases": ["www.project-name.local"],
+        "type": "type-project",
+        "repo": {
+            "url": "url-repository",
+            "branch": "master",
+            "private_key": "private_key",
+            "public_key": "public_key",
+            "erase_path": false,
+            "method": "sync"
+        },
+        "db" : {
+            "database": "db-name",
+            "host": "127.0.0.1",
+            "user": "root",
+            "password": "",
+            "install": "install.sql",
+            "provider": "mysql",
+            "migrate": "command/for/migrate",
+            "migrate_cwd": "current/directory/for/migrate/command",
+            "install_type": "none"
+        },
+        "disabled": [
+            "apache-configure"
+        ],
+        "php-oc": {
+            "redirect": "",
+            "base": "/"
+        },
+        "php-cake": {
+            "redirect": "",
+            "base": "/"
+        }
     }
 }
