@@ -25,11 +25,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   project_config['deploy-project']['path'] ||= PROJECT_PATH + project_config['deploy-project']['project']
   config.vm.synced_folder project_config['deploy-project']['source'], project_config['deploy-project']['path']
 
-  project_config.merge({
-      'mysql' => {
-          'bind_address' => project_config['deploy-project']['ip']
-      }
-  })
+  unless roject_config['deploy-project']['ip'].nil?
+    project_config.merge({
+        'mysql' => {
+            'bind_address' => project_config['deploy-project']['ip']
+        }
+    })
+  end
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = 'cookbooks'
