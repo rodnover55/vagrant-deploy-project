@@ -34,7 +34,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = 'cookbooks'
+    chef.cookbooks_path = ['cookbooks', '../cookbooks']
     chef.add_recipe 'deploy-project::develop'
     chef.json = project_config
   end
