@@ -34,7 +34,11 @@
         ],
         "php-oc": {
             "redirect": "",
-            "base": "/"
+            "base": "/",
+            "htaccess": {
+                "template": "template.erb",
+                "cookbook": "cookbook"
+            }
         },
         "php-cake": {
             "redirect": "",
