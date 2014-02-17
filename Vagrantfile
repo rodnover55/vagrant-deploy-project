@@ -36,11 +36,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ['cookbooks', '../cookbooks']
 
-    unless project_config['run_list'].nil?
-      chef.run_list = project_config['run_list'].nil?
+    if project_config['run_list'].nil?
+      chef.add_recipe 'deploy-project::develop'
+    else
+      chef.run_list = project_config['run_list']
+      chef.run_list << 'recipe[deploy-project::develop]'
     end
-    
-    chef.add_recipe 'deploy-project::develop'
+
     chef.json = project_config
   end
 end
