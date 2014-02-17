@@ -1,1 +1,1 @@
-cookbook_path [ 'cookbooks/', 'sites-cookbooks/']
+cookbook_path [ 'cookbooks/', '../cookbooks/']
