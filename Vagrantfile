@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 VAGRANTFILE_API_VERSION = "2"
-PROJECT_DESCRIPTION = "../dev.json"
+PROJECT_DESCRIPTION = "DE.json"
 PROJECT_PATH = '/var/www/'
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
