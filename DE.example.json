@@ -19,7 +19,7 @@
             "method": "sync"
         },
         "db" : {
-            "database": "db-name",
+            "": "db-name",
             "host": "127.0.0.1",
             "user": "root",
             "password": "",
@@ -38,11 +38,50 @@
             "htaccess": {
                 "template": "template.erb",
                 "cookbook": "cookbook"
+            },
+            "informations": [
+                {
+                    "title": "Title",
+                    "keyword": "slug",
+                    "template": "path/to/template.lang.tpl",
+                    "sort_order": 0,
+                    "bottom": 1
+                }
+            ],
+            "settings": {
+                "group": [{
+                    "key": "value"
+                }]
+            },
+            "permissions": {
+                "access": {
+                    "route": ["Group 1", "Group 2"],
+                    "route_2": {
+                        "added": ["Group 1", "Group 2"],
+                        "removed": ["Group 3", "Group 4"]
+                    }
+                },
+                "modify": {
+
+                }
+            },
+            "modules": {
+                "module_1": "install",
+                "module_2": "uninstall"
+            },
+            "payments": {
+                "payment_1": "install",
+                "payment_2": "uninstall"
             }
         },
         "php-cake": {
             "redirect": "",
             "base": "/"
+        },
+        "backup": {
+            "path": "/path/to/backup",
+            "bin": "/path/to/binary",
+            "log": "/path/to/log"
         }
     }
 }

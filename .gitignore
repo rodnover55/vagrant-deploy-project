@@ -15,4 +15,6 @@ bin/*
 
 DE.json
 .idea
-cookbooksnodes
+cookbooks
+site-cookbooks
+roles
