@@ -21,7 +21,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
   end
 
-  config.vm.synced_folder project_config['deploy-project']['source'], project_config['deploy-project']['path']
+  config.vm.synced_folder project_config['deploy-project']['source'] || '../../', project_config['deploy-project']['path']
 
   unless project_config['deploy-project']['ip'].nil?
     project_config.merge({
@@ -36,7 +36,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.roles_path = ['roles']
 
     chef.run_list = project_config['run_list']
-    chef.run_list << 'recipe[deploy-project::develop]'
+    chef.run_list.delete('recipe[deploy-project]')
 
     chef.json = project_config
   end
