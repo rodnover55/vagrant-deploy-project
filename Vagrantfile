@@ -35,8 +35,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.cookbooks_path = ['cookbooks', 'site-cookbooks']
     chef.roles_path = ['roles']
 
+    chef.environments_path = ['environments']
+    chef.environment = 'dev'
+
     chef.run_list = project_config['run_list']
-    chef.run_list.delete('recipe[deploy-project]')
+    chef.run_list << "role[dev]"
 
     chef.json = project_config
   end
