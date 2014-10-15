@@ -19,7 +19,7 @@
             "method": "sync"
         },
         "db" : {
-            "": "db-name",
+            "database": "db-name",
             "host": "127.0.0.1",
             "user": "root",
             "password": "",
@@ -30,7 +30,8 @@
             "install_type": "none"
         },
         "disabled": [
-            "apache-configure"
+            "apache-configure",
+            "mysql-configure"
         ],
         "php-oc": {
             "redirect": "",
@@ -53,6 +54,32 @@
                     "key": "value"
                 }]
             },
+            "geo_zones": [{
+                "name": "Zone Name",
+                "description": "Zone Description",
+                "slug": "Zone slug",
+                "zones": [{
+                    "county": "country iso2code",
+                    "zone": "Zone name"
+                }]
+            }],
+            "tax_rates": [{
+                "name": "Rate name",
+                "rate": "5",
+                "type": "P",
+                "slug": "tax rate slug",
+                "geo_zone": "Zone slug"
+            }],
+            "tax_classes": [{
+                "title": "Tax class name",
+                "description": "Tax class Description",
+                "slug": "Tax class slug",
+                "tax_rule": [{
+                    "slug": "tax rate slug",
+                    "based": "payment/shipping/store",
+                    "priority": "0"
+                }]
+            }],
             "permissions": {
                 "access": {
                     "route": ["Group 1", "Group 2"],
